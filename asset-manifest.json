@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/test_time/static/css/main.fc1465be.css",
+    "main.js": "/test_time/static/js/main.40322000.js",
+    "static/js/787.75577d9d.chunk.js": "/test_time/static/js/787.75577d9d.chunk.js",
+    "static/media/1678731621_bogatyr-club-p-mnogo-raznotsvetnikh-tochek-fon-foni-vkont-37.png": "/test_time/static/media/1678731621_bogatyr-club-p-mnogo-raznotsvetnikh-tochek-fon-foni-vkont-37.cfb99165272d9cd5c9c7.png",
+    "index.html": "/test_time/index.html",
+    "main.fc1465be.css.map": "/test_time/static/css/main.fc1465be.css.map",
+    "main.40322000.js.map": "/test_time/static/js/main.40322000.js.map",
+    "787.75577d9d.chunk.js.map": "/test_time/static/js/787.75577d9d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc1465be.css",
+    "static/js/main.40322000.js"
+  ]
+}
