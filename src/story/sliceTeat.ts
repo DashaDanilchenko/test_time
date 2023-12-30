@@ -16,6 +16,7 @@ const exercisesSlice = createSlice({
         return {
           ...exercise,
           answerUser: action.payload.correct,
+          answerContext: action.payload.text,
           task: {
             ...exercise.task,
             answers: exercise.task.answers.map((answer) => {

@@ -5,6 +5,7 @@ export const exercises = [
         time: '',
         create: false,
         answerUser: false,
+        answerContext: '',
         task: {
             context:'2 > 6 ?',
             answers: [
@@ -29,6 +30,7 @@ export const exercises = [
         time: '',
         create: false,
         answerUser: false,
+        answerContext: '',
         task: {
             context:'8 > 5 ?',
             answers: [
@@ -53,6 +55,7 @@ export const exercises = [
         time: '',
         create: false,
         answerUser: false,
+        answerContext: '',
         task: {
             context:'7 < 9 ?',
             answers: [
@@ -77,6 +80,7 @@ export const exercises = [
         time: '',
         create: false,
         answerUser: false,
+        answerContext: '',
         task: {
             context:'8 + 6 = ?',
             answers: [
@@ -101,6 +105,7 @@ export const exercises = [
         time: '',
         create: false,
         answerUser: false,
+        answerContext: '',
         task: {
             context:'15 - 7 = ?',
             answers: [

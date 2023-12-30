@@ -6,12 +6,14 @@ interface PropsResult {
 }
 
 export const Result = ({ exercise }: PropsResult) => {
-  const { time, answerUser, task } = exercise;
+  const { time, answerUser, task, answerContext } = exercise;
+
+  const taskContext = task.context.replace('?', '')
 
   return (
     <div className="item_result">
       <p className="context_result">
-        {task.context}
+        {taskContext} {answerContext}
         {answerUser ? (
           <IoAdd className="plus" />
         ) : (

@@ -37,14 +37,15 @@ export const ContextAccordion = ({
     id: string,
     id_from_answer: string,
     done: boolean,
-    correct: boolean
+    correct: boolean,
+    text: string,
   ) => {
-    dispatch(stateAnswer({ id, id_from_answer, done, correct }));
+    dispatch(stateAnswer({ id, id_from_answer, done, correct, text }));
   };
 
   return (
     <div className={id === activeElement ? "context_accordion" : "none"}>
-      <p className="contex_task">{context}</p>
+      <p className="context_task">{context}</p>
       {answers.map((answer, index) => (
         <div key={index} className="answer_task">
           <input
@@ -55,7 +56,8 @@ export const ContextAccordion = ({
                 id,
                 answer.answer_id,
                 answer.done,
-                answer.correct
+                answer.correct,
+                answer.text,
               )
             }
           />

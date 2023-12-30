@@ -16,5 +16,6 @@ export interface PropsValue {
       time: string,
       create: boolean,
       answerUser: boolean,
+      answerContext: string,
       task: PropsTask,
     }
