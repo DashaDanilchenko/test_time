@@ -6,7 +6,7 @@ import { persistStore, persistReducer, FLUSH,
     PURGE,
     REGISTER, } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import exercisesReducer from './sliseTeat';
+import exercisesReducer from './sliceTeat';
 
 
 
@@ -32,9 +32,7 @@ const persistConfig = {
     }),
 })
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch
 
 export const persistor = persistStore(store)

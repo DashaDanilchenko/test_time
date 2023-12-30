@@ -3,7 +3,6 @@ import { HeaderAccordion } from "./HeaderAccordion"
 import { PropsAccordion} from "../../interface"
 
 interface TimeProps {
-  ms: number,
   s: number,
   m: number,
   h: number,
@@ -12,7 +11,7 @@ interface TimeProps {
 interface Props {
   exercise: PropsAccordion;
   activeElement:string;
-  chengeActiveElement:(id: string) => void;
+  changeActiveElement:(id: string) => void;
   getInfo:(id:string) => void;
   time: TimeProps;
 }
@@ -20,7 +19,7 @@ interface Props {
 
 export const Accordion= ({exercise, 
   activeElement, 
-  chengeActiveElement, 
+  changeActiveElement, 
   getInfo, 
   time,
 }: Props) => {
@@ -30,7 +29,7 @@ export const Accordion= ({exercise,
   return (
     <div>
       <HeaderAccordion title={title} id={id} 
-      chengeActiveElement={chengeActiveElement} 
+      changeActiveElement={changeActiveElement} 
       create={create}
       />
       <ContextAccordion task={task} id={id}  

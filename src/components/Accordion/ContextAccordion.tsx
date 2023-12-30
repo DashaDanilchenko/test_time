@@ -2,7 +2,7 @@ import {  PropsTask} from "../../interface"
 import { useEffect, useState } from "react"
 import StopWatch from "../StopWatch/StopWatch"
 import { useAppDispatch } from "../../hooks"
-import { stateAnswer } from "../../story/sliseTeat"
+import { stateAnswer } from "../../story/sliceTeat"
 
 
 
@@ -11,7 +11,6 @@ interface Props {
   id: string,
   activeElement: string,
   time: {
-      ms: number,
       s: number,
       m: number,
       h: number,
@@ -41,18 +40,16 @@ export const ContextAccordion = ({task, id,
 
   return (
     <div
-     className={id === activeElement ? "" : "none"}
+     className={id === activeElement ? "context_accordion" : "none"}
      >
-      <p>{context}</p>
+      <p className="contex_task">{context}</p>
      {answers.map(( answer, index) => 
-     <div key={index}>
-      <p>{answer.text}</p>
-      <div >
-      <input type="radio" checked={answer.done} onChange={() => changeStateAnswer(id, answer.answer_id, answer.done, answer.correct)}/>
-      </div>
+     <div key={index} className="answer_task" >
+        <input type="radio" checked={answer.done} onChange={() => changeStateAnswer(id, answer.answer_id, answer.done, answer.correct)}/>
+        <p>{answer.text}</p>
      </div>
      )}
-     <button disabled={stateButton}  onClick={() => getInfo(id)}>get</button>
+     <button className="send" disabled={stateButton}  onClick={() => getInfo(id)}>send</button>
      
      <StopWatch time={time}/>
     </div>

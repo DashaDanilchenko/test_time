@@ -14,14 +14,14 @@ const exercisesSlice = createSlice({
         stateAnswer: (state, action) => { 
            
             state.exercises
-             = state.exercises.map(exercis => {
-                if (exercis.id !== action.payload.id) {
-                  return exercis;
+             = state.exercises.map(exercise => {
+                if (exercise.id !== action.payload.id) {
+                  return exercise;
                 }
-                return { ...exercis,
+                return { ...exercise,
                   answerUser: action.payload.correct,
                   task: {
-                  ...exercis.task , answers: exercis.task.answers.map(answer => {
+                  ...exercise.task , answers: exercise.task.answers.map(answer => {
                     return answer.answer_id === action.payload.id_from_answer
                       ? {...answer, done: !action.payload.done, correct: action.payload.correct}  
                       : {...answer, done: false} 
@@ -34,16 +34,15 @@ const exercisesSlice = createSlice({
         },
 
         stateTimeAnswer(state, action) {
-            state.exercises = state.exercises.map(exercis => {
-                          if (exercis.id !== action.payload.id) {
-                            return exercis;
+            state.exercises = state.exercises.map(exercise => {
+                          if (exercise.id !== action.payload.id) {
+                            return exercise;
                           }
-                          return { ...exercis, 
+                          return { ...exercise, 
                             time: 
                             `${action.payload.time.h} : 
                             ${action.payload.time.m} : 
-                            ${action.payload.time.s} : 
-                            ${action.payload.time.ms}
+                            ${action.payload.time.s}
                             `, create: true
                           }
                         })
@@ -52,11 +51,6 @@ const exercisesSlice = createSlice({
     }
 })
 
-
-
-
 export const {stateAnswer, stateTimeAnswer} = exercisesSlice.actions
-// Other code such as selectors can use the imported `RootState` type
-// export const selectExercises = (state: RootState) => state.exercises
 
 export default exercisesSlice.reducer
